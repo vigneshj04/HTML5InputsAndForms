@@ -16,3 +16,13 @@ output.textContent = salary.value;
 salary.addEventListener('input', function() {
     output.textContent = salary.value;
 })
+
+const email = document.querySelector('#email');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input', function() {
+    if (EMAIL_REGEX.test(email.value)) {
+        emailError.textContent = "";
+    } else {
+        emailError.textContent = "EMAIL Is Incorrect!";
+    }
+});
