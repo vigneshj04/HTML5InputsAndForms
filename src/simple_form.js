@@ -26,3 +26,13 @@ email.addEventListener('input', function() {
         emailError.textContent = "EMAIL Is Incorrect!";
     }
 });
+
+const telephone = document.querySelector('#tel');
+const telephoneError = document.querySelector('.tel-error');
+telephone.addEventListener('input', function() {
+    if (PHONE_REGEX.test(telephone.value)) {
+        telephoneError.textContent = "";
+    } else {
+        telephoneError.textContent = "TELEPHONE NUMBER Is Incorrect";
+    }
+});
