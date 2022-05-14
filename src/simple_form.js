@@ -36,3 +36,13 @@ telephone.addEventListener('input', function() {
         telephoneError.textContent = "TELEPHONE NUMBER Is Incorrect";
     }
 });
+
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.pwd-error');
+password.addEventListener('input', function() {
+    if (PASSWORD_REGEX.test(password.value)) {
+        passwordError.textContent = "";
+    } else {
+        passwordError.textContent = "PASSWORD Is Incorrect";
+    }
+});
